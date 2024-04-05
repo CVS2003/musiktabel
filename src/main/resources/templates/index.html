@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Musikdata</title>
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th>Artist</th>
+            <th>Origin</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Company address</th>
+            <th>Company phone</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr th:each="Artists:${data}">
+            <td th:text="${Artists.artist}"></td>
+            <td th:text="${Artists.origin}"> </td>
+            <td th:text="${Artists.gender}"></td>
+            <td th:number="${Artists.age}"></td>
+            <td th:text="${Artists.companyAddress}"></td>
+            <td th:text="${Artists.companyPhone}"></td>
+            <td th:text="${Artists.genre}"> </td>
+            <td th:href="@{'/delete/'+${Artists.id}}">Delete artist</td>
+            <td th:href="@{'/update/'+${Artists.id}}">Update artist</td>
+        </tr>
+
+
+
+
+
+
+    </tbody>
+
+
+
+</table>
+
+
+
+
+
+</body>
+</html>

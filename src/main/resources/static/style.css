@@ -1,0 +1,37 @@
+h1{
+
+    font-size:30px;
+}
+
+body{
+
+    font-family: Cambria;
+}
+
+.artistForm {
+
+    margin-bottom: 20px;
+}
+
+.artistField {
+    margin-bottom: 20px;
+}
+
+.originField {
+
+    margin-bottom: 20px;
+}
+
+.genderField {
+
+    margin-bottom: 20px;
+}
+
+.ageField {
+
+    margin-bottom: 20px;
+}
+
+.saveArtist {
+    margin-bottom: 20px;
+}
