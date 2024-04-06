@@ -50,13 +50,13 @@ public class MusikDataController {
 
     @PostMapping("/create")
     public String createArtist(@RequestParam("id") int id,
-                               @RequestParam("artist") String artist,
-                               @RequestParam("origin") String origin,
-                               @RequestParam("gender") String gender,
-                               @RequestParam("age") int age,
-                               @RequestParam("address") String address,
-                               @RequestParam("phone") String phone,
-                               @RequestParam("genre") String genre) {
+                               @RequestParam("artist_name") String artist,
+                               @RequestParam("artist_origin") String origin,
+                               @RequestParam("artist_gender") String gender,
+                               @RequestParam("artist_age") int age,
+                               @RequestParam("company_address") String address,
+                               @RequestParam("company_phone") String phone,
+                               @RequestParam("artist_genre") String genre) {
 
         Artist art = new Artist(artist, origin, gender, age, address, phone, genre);
 

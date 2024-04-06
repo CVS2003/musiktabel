@@ -19,9 +19,9 @@ public class MusikRepository {
     public List<Artist> getAll() {
 
         final String sql = "SELECT * FROM artists";
-            List<Artist> artists = jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Artist.class));
+            List<Artist> artistList = jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Artist.class));
 
-            return artists;
+            return artistList;
     }
 
     public void addArtist(Artist a) {

@@ -10,13 +10,13 @@ public class Artist {
 
     @Id
     private int id;
-    private String artist;
-    private String origin;
-    private String gender;
-    private int age;
-    private String companyAddress;
-    private String companyPhone;
-    private String genre;
+    private String artist_name;
+    private String artist_origin;
+    private String artist_gender;
+    private int artist_age;
+    private String company_address;
+    private String company_phone;
+    private String artist_genre;
 
 
     public Artist() {
@@ -26,20 +26,95 @@ public class Artist {
     /*
     Artist
      */
-    public Artist(int id, String artist, String origin, String gender, int age, String companyAddress,
-                  String companyPhone, String genre) {
+    public Artist(int id, String artist_name, String artist_origin, String artist_gender, int artist_age, String company_address,
+                  String company_phone, String artist_genre) {
 
         this.id = id;
-        this.artist = artist;
-        this.origin = origin;
-        this.gender = gender;
-        this.age = age;
-        this.companyAddress = companyAddress;
-        this.companyPhone = companyPhone;
-        this.genre = genre;
+        this.artist_name = artist_name;
+        this.artist_origin = artist_origin;
+        this.artist_gender = artist_gender;
+        this.artist_age = artist_age;
+        this.company_address = company_address;
+        this.company_phone = company_phone;
+        this.artist_genre = artist_genre;
 
     }
 
+    public Artist(String artist_name, String artist_origin, String artist_gender, int artist_age, String company_address, String company_phone, String artist_genre) {
+        this.artist_name = artist_name;
+        this.artist_origin = artist_origin;
+        this.artist_gender = artist_gender;
+        this.artist_age = artist_age;
+        this.company_address = company_address;
+        this.company_phone = company_phone;
+        this.artist_genre = artist_genre;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getArtist() {
+        return artist_name;
+    }
+
+    public void setArtist(String artist_name) {
+        this.artist_name = artist_name;
+    }
+
+    public String getOrigin() {
+        return artist_origin;
+    }
+
+    public void setOrigin(String artist_origin) {
+        this.artist_origin = artist_origin;
+    }
+
+    public String getGender() {
+        return artist_gender;
+    }
+
+    public void setGender(String artist_gender) {
+        this.artist_gender = artist_gender;
+    }
+
+    public int getAge() {
+        return artist_age;
+    }
+
+    public void setAge(int artist_age) {
+        this.artist_age = artist_age;
+    }
+
+    public String getCompanyAddress() {
+        return company_address;
+    }
+
+    public void setCompanyAddress(String company_address) {
+        this.company_address = company_address;
+    }
+
+    public String getCompanyPhone() {
+        return company_phone;
+    }
+
+    public void setCompanyPhone(String company_phone) {
+        this.company_phone = company_phone;
+    }
+
+    public String getGenre() {
+        return artist_genre;
+    }
+
+    public void setGenre(String artist_genre) {
+        this.artist_genre = artist_genre;
+    }
+
+    /*
     public Artist(String artist, String origin, String gender, int age, String companyAddress, String companyPhone, String genre) {
         this.artist = artist;
         this.origin = origin;
@@ -50,6 +125,10 @@ public class Artist {
         this.genre = genre;
     }
 
+     */
+
+
+    /*
     public int getId() {
         return id;
     }
@@ -113,11 +192,12 @@ public class Artist {
     public void setGenre(String genre) {
         this.genre = genre;
     }
+     */
 
     @Override
     public String toString() {
 
-        return artist+" "+origin+" "+gender+" "+age+" "+companyAddress+" "+companyPhone+" "+genre;
+        return artist_name+" "+artist_origin+" "+artist_gender+" "+artist_age+" "+company_address+" "+company_phone+" "+artist_genre;
     }
 
 
