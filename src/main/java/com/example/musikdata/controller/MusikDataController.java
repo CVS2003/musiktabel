@@ -12,6 +12,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+/*
+I tilfælde af hibernate exception indsæt nedenstående i application properties
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQLDialect
+
+ */
+
 import java.util.List;
 
 @Controller
@@ -23,11 +29,12 @@ public class MusikDataController {
     @Autowired
     MusikRepository musikRepository;
 
-    /*
-    Fra video om Spring:
-    @Autowired
-    Musikservice musikservice;
-     */
+
+    @GetMapping("/")
+    public String index() {
+
+        return "redirect:/musikdata";
+    }
 
     @GetMapping("/musikdata")
     public String musik(Model model) {
@@ -89,13 +96,13 @@ public class MusikDataController {
 
     @PostMapping("/update")
     public String updateArtist(@RequestParam("id") int id,
-                               @RequestParam("name") String name,
-                               @RequestParam("origin") String origin,
-                               @RequestParam("gender") String gender,
-                               @RequestParam("age") int age,
-                               @RequestParam("address") String address,
-                               @RequestParam("phone") String phone,
-                               @RequestParam("genre") String genre) {
+                               @RequestParam("artist_name") String name,
+                               @RequestParam("artist_origin") String origin,
+                               @RequestParam("artist_gender") String gender,
+                               @RequestParam("artist_age") int age,
+                               @RequestParam("company_address") String address,
+                               @RequestParam("company_phone") String phone,
+                               @RequestParam("artist_genre") String genre) {
 
         Artist art = new Artist(id, name, origin, gender, age, address, phone, genre);
         musikRepository.update(art);
